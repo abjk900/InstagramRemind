@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		199B40272108BC6400E2E3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B40262108BC6400E2E3D8 /* AppDelegate.swift */; };
+		199B402C2108BC6400E2E3D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199B402A2108BC6400E2E3D8 /* Main.storyboard */; };
+		199B402E2108BC6500E2E3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199B402D2108BC6500E2E3D8 /* Assets.xcassets */; };
+		199B40312108BC6500E2E3D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199B402F2108BC6500E2E3D8 /* LaunchScreen.storyboard */; };
+		199B403C2108BC6500E2E3D8 /* InstragramRemindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B403B2108BC6500E2E3D8 /* InstragramRemindTests.swift */; };
+		199B40472108BC6500E2E3D8 /* InstragramRemindUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B40462108BC6500E2E3D8 /* InstragramRemindUITests.swift */; };
+		199B40572108BD0B00E2E3D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 199B40562108BD0B00E2E3D8 /* GoogleService-Info.plist */; };
+		199B40592108BF3700E2E3D8 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B40582108BF3700E2E3D8 /* SignUpController.swift */; };
+		3DAC72BC15183AF5FB6BC6A3 /* Pods_InstragramRemindTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEAE15681E4E2454DF15F411 /* Pods_InstragramRemindTests.framework */; };
+		B8C667F24F20A60F6C1E49E7 /* Pods_InstragramRemind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A18046895CECCBCFA2D1AA51 /* Pods_InstragramRemind.framework */; };
+		BA853C349A8ADCDCBD3AA400 /* Pods_InstragramRemindUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F48BA0246D2E59CCB3953A5 /* Pods_InstragramRemindUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		199B40382108BC6500E2E3D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 199B401B2108BC6400E2E3D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 199B40222108BC6400E2E3D8;
+			remoteInfo = InstragramRemind;
+		};
+		199B40432108BC6500E2E3D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 199B401B2108BC6400E2E3D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 199B40222108BC6400E2E3D8;
+			remoteInfo = InstragramRemind;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15BCCB7DC78F5F1824A02B83 /* Pods-InstragramRemindUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstragramRemindUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstragramRemindUITests/Pods-InstragramRemindUITests.release.xcconfig"; sourceTree = "<group>"; };
+		199B40232108BC6400E2E3D8 /* InstragramRemind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstragramRemind.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		199B40262108BC6400E2E3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		199B402B2108BC6400E2E3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		199B402D2108BC6500E2E3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		199B40302108BC6500E2E3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		199B40322108BC6500E2E3D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		199B40372108BC6500E2E3D8 /* InstragramRemindTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstragramRemindTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		199B403B2108BC6500E2E3D8 /* InstragramRemindTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstragramRemindTests.swift; sourceTree = "<group>"; };
+		199B403D2108BC6500E2E3D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		199B40422108BC6500E2E3D8 /* InstragramRemindUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstragramRemindUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		199B40462108BC6500E2E3D8 /* InstragramRemindUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstragramRemindUITests.swift; sourceTree = "<group>"; };
+		199B40482108BC6500E2E3D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		199B40562108BD0B00E2E3D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		199B40582108BF3700E2E3D8 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		1F5BCF92698E7C05BA7423C4 /* Pods-InstragramRemindUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstragramRemindUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstragramRemindUITests/Pods-InstragramRemindUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		97966F42EDEAB56AECD31BFB /* Pods-InstragramRemind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstragramRemind.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstragramRemind/Pods-InstragramRemind.release.xcconfig"; sourceTree = "<group>"; };
+		9F48BA0246D2E59CCB3953A5 /* Pods_InstragramRemindUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstragramRemindUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18046895CECCBCFA2D1AA51 /* Pods_InstragramRemind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstragramRemind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3BFD39E7776E6AB60D65263 /* Pods-InstragramRemindTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstragramRemindTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstragramRemindTests/Pods-InstragramRemindTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DEAE15681E4E2454DF15F411 /* Pods_InstragramRemindTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstragramRemindTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2C1D598C26AB4676C0BAD59 /* Pods-InstragramRemindTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstragramRemindTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstragramRemindTests/Pods-InstragramRemindTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC6B2477DB8EC12397C2478E /* Pods-InstragramRemind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstragramRemind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstragramRemind/Pods-InstragramRemind.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		199B40202108BC6400E2E3D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C667F24F20A60F6C1E49E7 /* Pods_InstragramRemind.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199B40342108BC6500E2E3D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DAC72BC15183AF5FB6BC6A3 /* Pods_InstragramRemindTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199B403F2108BC6500E2E3D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA853C349A8ADCDCBD3AA400 /* Pods_InstragramRemindUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		199B401A2108BC6400E2E3D8 = {
+			isa = PBXGroup;
+			children = (
+				199B40252108BC6400E2E3D8 /* InstragramRemind */,
+				199B403A2108BC6500E2E3D8 /* InstragramRemindTests */,
+				199B40452108BC6500E2E3D8 /* InstragramRemindUITests */,
+				199B40242108BC6400E2E3D8 /* Products */,
+				80813B5A8C3244E79831C02A /* Pods */,
+				2F842B93F3C5256F92A31D2D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		199B40242108BC6400E2E3D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				199B40232108BC6400E2E3D8 /* InstragramRemind.app */,
+				199B40372108BC6500E2E3D8 /* InstragramRemindTests.xctest */,
+				199B40422108BC6500E2E3D8 /* InstragramRemindUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		199B40252108BC6400E2E3D8 /* InstragramRemind */ = {
+			isa = PBXGroup;
+			children = (
+				199B40262108BC6400E2E3D8 /* AppDelegate.swift */,
+				199B402A2108BC6400E2E3D8 /* Main.storyboard */,
+				199B402D2108BC6500E2E3D8 /* Assets.xcassets */,
+				199B402F2108BC6500E2E3D8 /* LaunchScreen.storyboard */,
+				199B40322108BC6500E2E3D8 /* Info.plist */,
+				199B40562108BD0B00E2E3D8 /* GoogleService-Info.plist */,
+				199B40582108BF3700E2E3D8 /* SignUpController.swift */,
+			);
+			path = InstragramRemind;
+			sourceTree = "<group>";
+		};
+		199B403A2108BC6500E2E3D8 /* InstragramRemindTests */ = {
+			isa = PBXGroup;
+			children = (
+				199B403B2108BC6500E2E3D8 /* InstragramRemindTests.swift */,
+				199B403D2108BC6500E2E3D8 /* Info.plist */,
+			);
+			path = InstragramRemindTests;
+			sourceTree = "<group>";
+		};
+		199B40452108BC6500E2E3D8 /* InstragramRemindUITests */ = {
+			isa = PBXGroup;
+			children = (
+				199B40462108BC6500E2E3D8 /* InstragramRemindUITests.swift */,
+				199B40482108BC6500E2E3D8 /* Info.plist */,
+			);
+			path = InstragramRemindUITests;
+			sourceTree = "<group>";
+		};
+		2F842B93F3C5256F92A31D2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A18046895CECCBCFA2D1AA51 /* Pods_InstragramRemind.framework */,
+				DEAE15681E4E2454DF15F411 /* Pods_InstragramRemindTests.framework */,
+				9F48BA0246D2E59CCB3953A5 /* Pods_InstragramRemindUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80813B5A8C3244E79831C02A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC6B2477DB8EC12397C2478E /* Pods-InstragramRemind.debug.xcconfig */,
+				97966F42EDEAB56AECD31BFB /* Pods-InstragramRemind.release.xcconfig */,
+				B3BFD39E7776E6AB60D65263 /* Pods-InstragramRemindTests.debug.xcconfig */,
+				E2C1D598C26AB4676C0BAD59 /* Pods-InstragramRemindTests.release.xcconfig */,
+				1F5BCF92698E7C05BA7423C4 /* Pods-InstragramRemindUITests.debug.xcconfig */,
+				15BCCB7DC78F5F1824A02B83 /* Pods-InstragramRemindUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		199B40222108BC6400E2E3D8 /* InstragramRemind */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 199B404B2108BC6500E2E3D8 /* Build configuration list for PBXNativeTarget "InstragramRemind" */;
+			buildPhases = (
+				E98A7CEA3667A67E6D5D0EF8 /* [CP] Check Pods Manifest.lock */,
+				199B401F2108BC6400E2E3D8 /* Sources */,
+				199B40202108BC6400E2E3D8 /* Frameworks */,
+				199B40212108BC6400E2E3D8 /* Resources */,
+				4F040763E59721577DEC0C43 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstragramRemind;
+			productName = InstragramRemind;
+			productReference = 199B40232108BC6400E2E3D8 /* InstragramRemind.app */;
+			productType = "com.apple.product-type.application";
+		};
+		199B40362108BC6500E2E3D8 /* InstragramRemindTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 199B404E2108BC6500E2E3D8 /* Build configuration list for PBXNativeTarget "InstragramRemindTests" */;
+			buildPhases = (
+				92E33BB14588799D9229418A /* [CP] Check Pods Manifest.lock */,
+				199B40332108BC6500E2E3D8 /* Sources */,
+				199B40342108BC6500E2E3D8 /* Frameworks */,
+				199B40352108BC6500E2E3D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				199B40392108BC6500E2E3D8 /* PBXTargetDependency */,
+			);
+			name = InstragramRemindTests;
+			productName = InstragramRemindTests;
+			productReference = 199B40372108BC6500E2E3D8 /* InstragramRemindTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		199B40412108BC6500E2E3D8 /* InstragramRemindUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 199B40512108BC6500E2E3D8 /* Build configuration list for PBXNativeTarget "InstragramRemindUITests" */;
+			buildPhases = (
+				273F104DDE65B817093A9D55 /* [CP] Check Pods Manifest.lock */,
+				199B403E2108BC6500E2E3D8 /* Sources */,
+				199B403F2108BC6500E2E3D8 /* Frameworks */,
+				199B40402108BC6500E2E3D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				199B40442108BC6500E2E3D8 /* PBXTargetDependency */,
+			);
+			name = InstragramRemindUITests;
+			productName = InstragramRemindUITests;
+			productReference = 199B40422108BC6500E2E3D8 /* InstragramRemindUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		199B401B2108BC6400E2E3D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Jae Ki Lee";
+				TargetAttributes = {
+					199B40222108BC6400E2E3D8 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					199B40362108BC6500E2E3D8 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 199B40222108BC6400E2E3D8;
+					};
+					199B40412108BC6500E2E3D8 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 199B40222108BC6400E2E3D8;
+					};
+				};
+			};
+			buildConfigurationList = 199B401E2108BC6400E2E3D8 /* Build configuration list for PBXProject "InstragramRemind" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 199B401A2108BC6400E2E3D8;
+			productRefGroup = 199B40242108BC6400E2E3D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				199B40222108BC6400E2E3D8 /* InstragramRemind */,
+				199B40362108BC6500E2E3D8 /* InstragramRemindTests */,
+				199B40412108BC6500E2E3D8 /* InstragramRemindUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		199B40212108BC6400E2E3D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199B40312108BC6500E2E3D8 /* LaunchScreen.storyboard in Resources */,
+				199B40572108BD0B00E2E3D8 /* GoogleService-Info.plist in Resources */,
+				199B402E2108BC6500E2E3D8 /* Assets.xcassets in Resources */,
+				199B402C2108BC6400E2E3D8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199B40352108BC6500E2E3D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199B40402108BC6500E2E3D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		273F104DDE65B817093A9D55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstragramRemindUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F040763E59721577DEC0C43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-InstragramRemind/Pods-InstragramRemind-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstragramRemind/Pods-InstragramRemind-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92E33BB14588799D9229418A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstragramRemindTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E98A7CEA3667A67E6D5D0EF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstragramRemind-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		199B401F2108BC6400E2E3D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199B40272108BC6400E2E3D8 /* AppDelegate.swift in Sources */,
+				199B40592108BF3700E2E3D8 /* SignUpController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199B40332108BC6500E2E3D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199B403C2108BC6500E2E3D8 /* InstragramRemindTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199B403E2108BC6500E2E3D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199B40472108BC6500E2E3D8 /* InstragramRemindUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		199B40392108BC6500E2E3D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 199B40222108BC6400E2E3D8 /* InstragramRemind */;
+			targetProxy = 199B40382108BC6500E2E3D8 /* PBXContainerItemProxy */;
+		};
+		199B40442108BC6500E2E3D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 199B40222108BC6400E2E3D8 /* InstragramRemind */;
+			targetProxy = 199B40432108BC6500E2E3D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		199B402A2108BC6400E2E3D8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				199B402B2108BC6400E2E3D8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		199B402F2108BC6500E2E3D8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				199B40302108BC6500E2E3D8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		199B40492108BC6500E2E3D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		199B404A2108BC6500E2E3D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		199B404C2108BC6500E2E3D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC6B2477DB8EC12397C2478E /* Pods-InstragramRemind.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XS77XABE92;
+				INFOPLIST_FILE = InstragramRemind/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JK-L.InstragramRemind";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		199B404D2108BC6500E2E3D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97966F42EDEAB56AECD31BFB /* Pods-InstragramRemind.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XS77XABE92;
+				INFOPLIST_FILE = InstragramRemind/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JK-L.InstragramRemind";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		199B404F2108BC6500E2E3D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3BFD39E7776E6AB60D65263 /* Pods-InstragramRemindTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XS77XABE92;
+				INFOPLIST_FILE = InstragramRemindTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JK-L.InstragramRemindTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstragramRemind.app/InstragramRemind";
+			};
+			name = Debug;
+		};
+		199B40502108BC6500E2E3D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2C1D598C26AB4676C0BAD59 /* Pods-InstragramRemindTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XS77XABE92;
+				INFOPLIST_FILE = InstragramRemindTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JK-L.InstragramRemindTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstragramRemind.app/InstragramRemind";
+			};
+			name = Release;
+		};
+		199B40522108BC6500E2E3D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F5BCF92698E7C05BA7423C4 /* Pods-InstragramRemindUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XS77XABE92;
+				INFOPLIST_FILE = InstragramRemindUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JK-L.InstragramRemindUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = InstragramRemind;
+			};
+			name = Debug;
+		};
+		199B40532108BC6500E2E3D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15BCCB7DC78F5F1824A02B83 /* Pods-InstragramRemindUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XS77XABE92;
+				INFOPLIST_FILE = InstragramRemindUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JK-L.InstragramRemindUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = InstragramRemind;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		199B401E2108BC6400E2E3D8 /* Build configuration list for PBXProject "InstragramRemind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199B40492108BC6500E2E3D8 /* Debug */,
+				199B404A2108BC6500E2E3D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		199B404B2108BC6500E2E3D8 /* Build configuration list for PBXNativeTarget "InstragramRemind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199B404C2108BC6500E2E3D8 /* Debug */,
+				199B404D2108BC6500E2E3D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		199B404E2108BC6500E2E3D8 /* Build configuration list for PBXNativeTarget "InstragramRemindTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199B404F2108BC6500E2E3D8 /* Debug */,
+				199B40502108BC6500E2E3D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		199B40512108BC6500E2E3D8 /* Build configuration list for PBXNativeTarget "InstragramRemindUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199B40522108BC6500E2E3D8 /* Debug */,
+				199B40532108BC6500E2E3D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 199B401B2108BC6400E2E3D8 /* Project object */;
+}

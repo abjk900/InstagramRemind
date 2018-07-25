@@ -1,0 +1,6 @@
+framework module Pods_InstragramRemind {
+  umbrella header "Pods-InstragramRemind-umbrella.h"
+
+  export *
+  module * { export * }
+}
