@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190B2B662109E26D00638DF7 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B2B652109E26D00638DF7 /* UserProfileHeader.swift */; };
+		190B2B682109E63300638DF7 /* UserProfilePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B2B672109E63300638DF7 /* UserProfilePhotoCell.swift */; };
 		199B40272108BC6400E2E3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B40262108BC6400E2E3D8 /* AppDelegate.swift */; };
 		199B402C2108BC6400E2E3D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199B402A2108BC6400E2E3D8 /* Main.storyboard */; };
 		199B402E2108BC6500E2E3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199B402D2108BC6500E2E3D8 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		15BCCB7DC78F5F1824A02B83 /* Pods-InstragramRemindUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstragramRemindUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstragramRemindUITests/Pods-InstragramRemindUITests.release.xcconfig"; sourceTree = "<group>"; };
+		190B2B652109E26D00638DF7 /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
+		190B2B672109E63300638DF7 /* UserProfilePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilePhotoCell.swift; sourceTree = "<group>"; };
 		199B40232108BC6400E2E3D8 /* InstragramRemind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstragramRemind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199B40262108BC6400E2E3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		199B402B2108BC6400E2E3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				199B406321090BE500E2E3D8 /* UserProfileController.swift */,
+				190B2B652109E26D00638DF7 /* UserProfileHeader.swift */,
+				190B2B672109E63300638DF7 /* UserProfilePhotoCell.swift */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -422,11 +428,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				199B40272108BC6400E2E3D8 /* AppDelegate.swift in Sources */,
+				190B2B662109E26D00638DF7 /* UserProfileHeader.swift in Sources */,
 				199B405C2108BFEC00E2E3D8 /* Extensions.swift in Sources */,
 				199B406421090BE500E2E3D8 /* UserProfileController.swift in Sources */,
 				199B405E2108D4B800E2E3D8 /* MainTabBarController.swift in Sources */,
 				199B40592108BF3700E2E3D8 /* SignUpController.swift in Sources */,
 				199B40612108D60400E2E3D8 /* LoginController.swift in Sources */,
+				190B2B682109E63300638DF7 /* UserProfilePhotoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
