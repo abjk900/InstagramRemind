@@ -8,6 +8,9 @@ target 'InstragramRemind' do
   # Pods for InstragramRemind
 
 pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
 
   target 'InstragramRemindTests' do
     inherit! :search_paths
