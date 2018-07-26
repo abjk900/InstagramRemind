@@ -83,15 +83,16 @@ class LoginController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) { (user, err) in
             
             if let err = err {
-                print("Faile to sign in with email:", err)
+                print("Failed to sign in with email:", err)
                 return
             }
             
-            print("Sucessfully logged in with user:", user?.uid ?? "")
+            print("Successfully logged in with suer:", user?.uid ?? "")
             
-            guard let mainTapBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else {return}
+            //mainTabBarController 를 안해주면 그냥 검은색 탭바만 보인다.
+            guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else {return}
             
-            mainTapBarController.setupViewControllers()
+            mainTabBarController.setupViewControllers()
             
             self.dismiss(animated: true, completion: nil)
         }
