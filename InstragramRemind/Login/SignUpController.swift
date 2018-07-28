@@ -128,6 +128,8 @@ class SignUpController: UIViewController, UIImagePickerControllerDelegate, UINav
                     return
                 }
                 
+                print("\(metadata)")
+                
                 //Get the profile image url for saving database
                 guard let profileImageUrl = metadata?.downloadURL()?.absoluteString else {return}
                 

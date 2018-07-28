@@ -20,16 +20,18 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         
         collectionView?.backgroundColor = .white
         
+        fetchUser()
+        
         collectionView?.register(UserProfileHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         collectionView?.register(UserProfilePhotoCell.self, forCellWithReuseIdentifier: cellId)
         
         setupLogOutButton()
         
-        collectionView?.dataSource = self
     }
     
     fileprivate func setupLogOutButton() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "gear").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleLogOut))
+        
     }
     
     @objc func handleLogOut() {
@@ -59,12 +61,16 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! UserProfileHeader
         
+        header.user = self.user
+        
         return header
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
         return CGSize(width: view.frame.width, height: 200)
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -93,4 +99,26 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         return 4
     }
     
+    //login 해 들어오는 user 는 매번 바뀔수 있으니까 user 는 var 로
+    var user: User?
+    
+    fileprivate func fetchUser() {
+        
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            guard let userDictionary = snapshot.value as? [String : Any] else {return}
+            
+            self.user = User(uid: uid, dictionary: userDictionary)
+            
+            self.navigationItem.title = self.user?.username
+            
+            self.collectionView?.reloadData()
+            
+        }) { (err) in
+            print("Faile to fetch user", err)
+        }
+        
+        
+    }
 }
