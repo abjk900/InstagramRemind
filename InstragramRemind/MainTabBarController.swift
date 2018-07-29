@@ -16,7 +16,8 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         let index = viewControllers?.index(of: viewController)
         if index == 1 {
             let layout = UICollectionViewFlowLayout()
-            let photoSelectorController = PhotoSelectorController()
+            //when init the collectionViewController should be with layout.
+            let photoSelectorController = PhotoSelectorController(collectionViewLayout: layout)
             let navController = UINavigationController(rootViewController: photoSelectorController)
             
             present(navController, animated: true, completion: nil)

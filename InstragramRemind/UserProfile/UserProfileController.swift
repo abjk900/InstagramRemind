@@ -64,7 +64,6 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         header.user = self.user
         
         return header
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -73,13 +72,13 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         
     }
     
+    //Collection Cell
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! UserProfilePhotoCell
         
         return cell
     }
     
-    //Collection Cell
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = (view.frame.width - 2) / 3
