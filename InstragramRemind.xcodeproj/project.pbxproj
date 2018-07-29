@@ -27,6 +27,8 @@
 		19AF0F29210CC93C0096EC63 /* UserSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF0F28210CC93C0096EC63 /* UserSearchController.swift */; };
 		19AF0F2C210CCE3E0096EC63 /* HomePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF0F2B210CCE3E0096EC63 /* HomePostCell.swift */; };
 		19AF0F2E210CE6490096EC63 /* PhotoSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF0F2D210CE6490096EC63 /* PhotoSelectorController.swift */; };
+		19F8763D210E20FF001DE732 /* PhotoSelectorHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F8763C210E20FF001DE732 /* PhotoSelectorHeader.swift */; };
+		19F8763F210E2269001DE732 /* PhotoSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F8763E210E2269001DE732 /* PhotoSelectorCell.swift */; };
 		3DAC72BC15183AF5FB6BC6A3 /* Pods_InstragramRemindTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEAE15681E4E2454DF15F411 /* Pods_InstragramRemindTests.framework */; };
 		B8C667F24F20A60F6C1E49E7 /* Pods_InstragramRemind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A18046895CECCBCFA2D1AA51 /* Pods_InstragramRemind.framework */; };
 		BA853C349A8ADCDCBD3AA400 /* Pods_InstragramRemindUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F48BA0246D2E59CCB3953A5 /* Pods_InstragramRemindUITests.framework */; };
@@ -77,6 +79,8 @@
 		19AF0F28210CC93C0096EC63 /* UserSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchController.swift; sourceTree = "<group>"; };
 		19AF0F2B210CCE3E0096EC63 /* HomePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePostCell.swift; sourceTree = "<group>"; };
 		19AF0F2D210CE6490096EC63 /* PhotoSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorController.swift; sourceTree = "<group>"; };
+		19F8763C210E20FF001DE732 /* PhotoSelectorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorHeader.swift; sourceTree = "<group>"; };
+		19F8763E210E2269001DE732 /* PhotoSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorCell.swift; sourceTree = "<group>"; };
 		1F5BCF92698E7C05BA7423C4 /* Pods-InstragramRemindUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstragramRemindUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstragramRemindUITests/Pods-InstragramRemindUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		97966F42EDEAB56AECD31BFB /* Pods-InstragramRemind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstragramRemind.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstragramRemind/Pods-InstragramRemind.release.xcconfig"; sourceTree = "<group>"; };
 		9F48BA0246D2E59CCB3953A5 /* Pods_InstragramRemindUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstragramRemindUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				19AF0F2D210CE6490096EC63 /* PhotoSelectorController.swift */,
+				19F8763C210E20FF001DE732 /* PhotoSelectorHeader.swift */,
+				19F8763E210E2269001DE732 /* PhotoSelectorCell.swift */,
 			);
 			path = AddPhoto;
 			sourceTree = "<group>";
@@ -472,6 +478,7 @@
 				199B40272108BC6400E2E3D8 /* AppDelegate.swift in Sources */,
 				190B2B662109E26D00638DF7 /* UserProfileHeader.swift in Sources */,
 				19AF0F27210CC9270096EC63 /* HomeController.swift in Sources */,
+				19F8763D210E20FF001DE732 /* PhotoSelectorHeader.swift in Sources */,
 				199B405C2108BFEC00E2E3D8 /* Extensions.swift in Sources */,
 				199B406421090BE500E2E3D8 /* UserProfileController.swift in Sources */,
 				190B2B6D210A157800638DF7 /* FirebaseUnit.swift in Sources */,
@@ -481,6 +488,7 @@
 				19AF0F2E210CE6490096EC63 /* PhotoSelectorController.swift in Sources */,
 				19AF0F2C210CCE3E0096EC63 /* HomePostCell.swift in Sources */,
 				199B40612108D60400E2E3D8 /* LoginController.swift in Sources */,
+				19F8763F210E2269001DE732 /* PhotoSelectorCell.swift in Sources */,
 				19AF0F29210CC93C0096EC63 /* UserSearchController.swift in Sources */,
 				190B2B682109E63300638DF7 /* UserProfilePhotoCell.swift in Sources */,
 			);
