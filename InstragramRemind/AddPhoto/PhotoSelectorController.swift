@@ -43,7 +43,7 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
         collectionView?.register(PhotoSelectorCell.self, forCellWithReuseIdentifier: cellId)
     }
     
-    var selectedImage = UIImage()
+    var selectedImage: UIImage?
     var images = [UIImage]()
     var assets = [PHAsset]()
     
@@ -105,7 +105,6 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
         collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
     }
     
-    
     //Header
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let width = view.frame.width
@@ -116,6 +115,20 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headrId, for: indexPath) as! PhotoSelectorHeader
         
         header.photoImagView.image = selectedImage
+        
+        if let selectedImage = selectedImage{
+            if let index = self.images.index(of: selectedImage){
+                let selectedAsset = self.assets[index]
+
+                let imageManger = PHImageManager.default()
+                let targetSize = CGSize(width: 600, height: 600)
+                imageManger.requestImage(for: selectedAsset, targetSize: targetSize, contentMode: .default, options: nil) { (image, info) in
+
+                    header.photoImagView.image = image
+                }
+
+            }
+        }
         
         return header
     }
