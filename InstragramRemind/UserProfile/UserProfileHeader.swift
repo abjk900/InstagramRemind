@@ -13,38 +13,16 @@ class UserProfileHeader: UICollectionViewCell {
     
     var user: User? {
         didSet{
-            setupProfilImage()
-            
             usernameLabel.text = user?.username
+            
+            guard let userProfileImageUrl = user?.profileImagUrl else {return}
+            
+            profileImageView.loadImage(urlString: userProfileImageUrl)
         }
     }
     
-    fileprivate func setupProfileImage() {
-        guard let profileImageUrl = user?.profileImagUrl else {return}
-        
-        guard let url = URL(string: profileImageUrl) else {return}
-        
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
-            
-            if let err = err {
-                print("Faield to fetch profile image:", err)
-                return
-            }
-            
-            guard let data = data else {return}
-            
-            let image = UIImage(data: data)
-            
-            //need to get back onto the main UI thread
-            DispatchQueue.main.async {
-                self.profileImageView.image = image
-            }
-            
-        }.resume()
-    }
-    
-    var profileImageView: UIImageView = {
-        let iv = UIImageView()
+    var profileImageView: CustomImageView = {
+        let iv = CustomImageView()
         return iv
     }()
     
@@ -195,28 +173,6 @@ class UserProfileHeader: UICollectionViewCell {
         bottomDivederView.anchor(top: stackView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0.5)
     }
     
-    fileprivate func setupProfilImage() {
-        guard let profileImageUrl = user?.profileImagUrl else {return}
-        
-        guard let url = URL(string: profileImageUrl) else {return}
-        
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
-            
-            if let err = err {
-                print("Failed to fetch profile image:", err)
-                return
-            }
-            
-            guard let data = data else {return}
-            
-            let image = UIImage(data: data)
-            
-            DispatchQueue.main.async {
-                self.profileImageView.image = image
-            }
-        }.resume()
-        
-    }
     
 }
 

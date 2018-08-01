@@ -27,7 +27,9 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
     }
     
     @objc func handleNext() {
-        
+        let sharePhotoController = SharePhotoController()
+        sharePhotoController.selectedImage = selectedImage
+        navigationController?.pushViewController(sharePhotoController, animated: true)
     }
     
     override func viewDidLoad() {
@@ -47,6 +49,7 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
     var images = [UIImage]()
     var assets = [PHAsset]()
     
+    //func 를 type 처럼 부릴수 있다.
     fileprivate func assetsFetchOptions() -> PHFetchOptions {
         let fetchOptions = PHFetchOptions()
         fetchOptions.fetchLimit = 30
@@ -57,11 +60,7 @@ class PhotoSelectorController: UICollectionViewController, UICollectionViewDeleg
     }
     
     fileprivate func fetchPhotos(){
-//        let fetchOptions = PHFetchOptions()
-//        fetchOptions.fetchLimit = 30
-//        let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: false)
-//        fetchOptions.sortDescriptors = [sortDescriptor]
-        
+        //PHFetchOptions typed 된 assetsFetchOptions() 을 fetchAssets fucntion option에 들어가야 할 type 으로 넣었다.
         let allPhotos = PHAsset.fetchAssets(with: .image, options: assetsFetchOptions())
         
         DispatchQueue.global(qos: .background).async {

@@ -10,6 +10,26 @@ import UIKit
 
 class HomePostCell: UICollectionViewCell {
     
+    var post: Post? {
+        didSet {
+            guard let postImageUrl = post?.imageUrl else {return}
+            
+            photoImageView.loadImage(urlString: postImageUrl)
+            
+            captionLabel.text = post?.caption
+        }
+    }
+    
+    var user: User? {
+        didSet {
+            guard let profileImageUrl = user?.profileImagUrl else {return}
+            
+            userProfileImageView.loadImage(urlString: profileImageUrl)
+            
+            usernameLabel.text = user?.username
+        }
+    }
+    
     fileprivate func setupAttributedCaption() {
         
         let attributtedText = NSMutableAttributedString(string: "post.user.username", attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 14)])
@@ -19,15 +39,15 @@ class HomePostCell: UICollectionViewCell {
         attributtedText.append(NSAttributedString(string: "\n\n", attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 4)]))
     }
     
-    let userProfileImageView: UIImageView = {
-        let iv = UIImageView()
+    let userProfileImageView: CustomImageView = {
+        let iv = CustomImageView()
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
         return iv
     }()
     
-    let photoImageView: UIImageView = {
-        let iv = UIImageView()
+    let photoImageView: CustomImageView = {
+        let iv = CustomImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         return iv
