@@ -11,6 +11,7 @@
 		190B2B682109E63300638DF7 /* UserProfilePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B2B672109E63300638DF7 /* UserProfilePhotoCell.swift */; };
 		190B2B6B210A136700638DF7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B2B6A210A136700638DF7 /* User.swift */; };
 		190B2B6D210A157800638DF7 /* FirebaseUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B2B6C210A157800638DF7 /* FirebaseUnit.swift */; };
+		1938BF3F2112B46500344B80 /* FirebaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1938BF3E2112B46500344B80 /* FirebaseUtils.swift */; };
 		19455BF72111ED0D00394E1F /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19455BF62111ED0D00394E1F /* CustomImageView.swift */; };
 		199B40272108BC6400E2E3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B40262108BC6400E2E3D8 /* AppDelegate.swift */; };
 		199B402C2108BC6400E2E3D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199B402A2108BC6400E2E3D8 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		190B2B672109E63300638DF7 /* UserProfilePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilePhotoCell.swift; sourceTree = "<group>"; };
 		190B2B6A210A136700638DF7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		190B2B6C210A157800638DF7 /* FirebaseUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUnit.swift; sourceTree = "<group>"; };
+		1938BF3E2112B46500344B80 /* FirebaseUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtils.swift; sourceTree = "<group>"; };
 		19455BF62111ED0D00394E1F /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		199B40232108BC6400E2E3D8 /* InstragramRemind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstragramRemind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199B40262108BC6400E2E3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			children = (
 				199B405B2108BFEC00E2E3D8 /* Extensions.swift */,
 				19455BF62111ED0D00394E1F /* CustomImageView.swift */,
+				1938BF3E2112B46500344B80 /* FirebaseUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				19AF0F2C210CCE3E0096EC63 /* HomePostCell.swift in Sources */,
 				199B40612108D60400E2E3D8 /* LoginController.swift in Sources */,
 				19F8763F210E2269001DE732 /* PhotoSelectorCell.swift in Sources */,
+				1938BF3F2112B46500344B80 /* FirebaseUtils.swift in Sources */,
 				19EB80DE2111D0370084CA15 /* Post.swift in Sources */,
 				19AF0F29210CC93C0096EC63 /* UserSearchController.swift in Sources */,
 				190B2B682109E63300638DF7 /* UserProfilePhotoCell.swift in Sources */,
