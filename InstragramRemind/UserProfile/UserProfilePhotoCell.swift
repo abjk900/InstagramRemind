@@ -11,10 +11,24 @@ import Firebase
 
 class UserProfilePhotoCell : UICollectionViewCell {
     
+    var post: Post? {
+        didSet{
+            guard let postUrl = post?.imageUrl else {return}
+            
+            postImageView.loadImage(urlString: postUrl)
+        }
+    }
+    
+    var postImageView: CustomImageView = {
+        let iv = CustomImageView()
+        return iv
+    }()
+    
     override init(frame: CGRect) {
         super .init(frame: frame)
         
-        self.backgroundColor = .blue
+        addSubview(postImageView)
+        postImageView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
     }
     
     required init?(coder aDecoder: NSCoder) {

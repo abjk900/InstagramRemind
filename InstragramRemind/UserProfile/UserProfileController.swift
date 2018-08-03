@@ -20,13 +20,12 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         
         collectionView?.backgroundColor = .white
         
-        fetchUser()
+        fetchUserWithUID()
         
         collectionView?.register(UserProfileHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         collectionView?.register(UserProfilePhotoCell.self, forCellWithReuseIdentifier: cellId)
         
         setupLogOutButton()
-        
     }
     
     fileprivate func setupLogOutButton() {
@@ -61,7 +60,7 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! UserProfileHeader
         
-        header.user = self.user
+        header.user = self.post?.user
         
         return header
     }
@@ -75,6 +74,8 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
     //Collection Cell
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! UserProfilePhotoCell
+        
+        cell.post = posts[indexPath.item]
         
         return cell
     }
@@ -95,29 +96,36 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return posts.count
     }
     
-    //login 해 들어오는 user 는 매번 바뀔수 있으니까 user 는 var 로
-    var user: User?
-    
-    fileprivate func fetchUser() {
-        
+    fileprivate func fetchUserWithUID() {
         guard let uid = Auth.auth().currentUser?.uid else {return}
-        Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+        
+        Database.fetchUserWithUID(uid: uid) { (user) in
+            self.fetchPostWithUser(user: user)
+        }
+    }
+    
+    var posts = [Post]()
+    var post: Post?
+    
+    fileprivate func fetchPostWithUser(user: User) {
+        Database.database().reference().child("posts").child(user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
             
-            guard let userDictionary = snapshot.value as? [String : Any] else {return}
+            guard let dictionaries = snapshot.value as? [String : Any] else {return}
             
-            self.user = User(uid: uid, dictionary: userDictionary)
-            
-            self.navigationItem.title = self.user?.username
+            dictionaries.forEach({ (key, value) in
+                guard let dictionary = value as? [String : Any] else {return}
+                
+                self.post = Post(user: user, dictionary: dictionary)
+                self.posts.append(self.post!)
+            })
             
             self.collectionView?.reloadData()
             
         }) { (err) in
-            print("Faile to fetch user", err)
+            print("Failed to fetch posts:", err)
         }
-        
-        
     }
 }

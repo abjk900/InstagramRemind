@@ -15,7 +15,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let index = viewControllers?.index(of: viewController)
         
-        if index == 1 {
+        if index == 2 {
             let layout = UICollectionViewFlowLayout()
             
             let photoSelectorController = PhotoSelectorController(collectionViewLayout: layout)
@@ -53,7 +53,11 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let homeNavController = templateNavController(unselectedImag: #imageLiteral(resourceName: "home_unselected"), selectedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: HomeController(collectionViewLayout: UICollectionViewFlowLayout()))
         
+        let searchNavController = templateNavController(unselectedImag: #imageLiteral(resourceName: "search_unselected"), selectedImage: #imageLiteral(resourceName: "search_selected"), rootViewController: UserSearchController())
+        
         let plusNavController = templateNavController(unselectedImag: #imageLiteral(resourceName: "plus_unselected"), selectedImage: #imageLiteral(resourceName: "plus_unselected"))
+        
+        let likeNavController = templateNavController(unselectedImag: #imageLiteral(resourceName: "like_unselected"), selectedImage: #imageLiteral(resourceName: "like_selected"))
         
         let layout = UICollectionViewFlowLayout()
         let userProfileController = UserProfileController(collectionViewLayout: layout)
@@ -65,7 +69,13 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         tabBar.tintColor = .black
         
-        viewControllers = [homeNavController,plusNavController,userProfileNavController]
+        viewControllers = [homeNavController,searchNavController,plusNavController,likeNavController,userProfileNavController]
+        
+        guard let items = tabBar.items else {return}
+        
+        for item in items {
+            item.imageInsets = UIEdgeInsets(top: 4, left: 0, bottom: -4, right: 0)
+        }
         
     }
     

@@ -15,11 +15,14 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        collectionView?.backgroundColor = .white
+        
+        collectionView?.register(HomePostCell.self, forCellWithReuseIdentifier: cellId)
         
         fetchPosts()
         
-        collectionView?.backgroundColor = .white
-        collectionView?.register(HomePostCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.reloadData()
     }
     
     var posts = [Post]()
