@@ -16,8 +16,8 @@ class HomePostCell: UICollectionViewCell {
             photoImageView.loadImage(urlString: postImageUrl)
             captionLabel.text = post?.caption
             
-            userProfileImageView.loadImage(urlString: (post?.user.profileImagUrl)!)
-            usernameLabel.text = post?.user.username
+            userProfileImageView.loadImage(urlString: (post?.user?.profileImagUrl)!)
+            usernameLabel.text = post?.user?.username
         }
     }
     

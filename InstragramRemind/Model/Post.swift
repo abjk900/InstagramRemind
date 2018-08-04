@@ -16,7 +16,7 @@ struct Post {
     let imageUrl: String
     let creationDate: Date
     
-    let user: User
+    let user: User?
     
     init(user: User, dictionary: [String: Any]) {
         self.user = user

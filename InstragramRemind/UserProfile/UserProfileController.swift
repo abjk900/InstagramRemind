@@ -20,12 +20,51 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         
         collectionView?.backgroundColor = .white
         
-        fetchUserWithUID()
-        
         collectionView?.register(UserProfileHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         collectionView?.register(UserProfilePhotoCell.self, forCellWithReuseIdentifier: cellId)
         
         setupLogOutButton()
+        
+        fetchUser()
+    }
+    
+    var user: User?
+    var posts = [Post]()
+    
+    fileprivate func fetchUser() {
+        
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        
+        Database.fetchUserWithUID(uid: uid) { (user) in
+            self.user = user
+            self.navigationItem.title = self.user?.username
+            
+            self.collectionView?.reloadData()
+            
+            self.fetchPost(user: user)
+        }
+        
+    }
+    
+    fileprivate func fetchPost(user: User) {
+        Database.database().reference().child("posts").child(user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            guard let dictionaries = snapshot.value as? [String : Any] else {return}
+            
+            dictionaries.forEach({ (key, value) in
+                guard let dictionary = value as? [String : Any] else {return}
+                
+                var post = Post(user: user, dictionary: dictionary)
+                
+                self.posts.append(post)
+                
+                self.collectionView?.reloadData()
+            })
+            
+        }) { (err) in
+            print("Failed to fetch posts:", err)
+        }
+        
     }
     
     fileprivate func setupLogOutButton() {
@@ -60,7 +99,7 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! UserProfileHeader
         
-        header.user = self.post?.user
+        header.user = self.user
         
         return header
     }
@@ -99,33 +138,5 @@ class UserProfileController: UICollectionViewController, UICollectionViewDelegat
         return posts.count
     }
     
-    fileprivate func fetchUserWithUID() {
-        guard let uid = Auth.auth().currentUser?.uid else {return}
-        
-        Database.fetchUserWithUID(uid: uid) { (user) in
-            self.fetchPostWithUser(user: user)
-        }
-    }
     
-    var posts = [Post]()
-    var post: Post?
-    
-    fileprivate func fetchPostWithUser(user: User) {
-        Database.database().reference().child("posts").child(user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            guard let dictionaries = snapshot.value as? [String : Any] else {return}
-            
-            dictionaries.forEach({ (key, value) in
-                guard let dictionary = value as? [String : Any] else {return}
-                
-                self.post = Post(user: user, dictionary: dictionary)
-                self.posts.append(self.post!)
-            })
-            
-            self.collectionView?.reloadData()
-            
-        }) { (err) in
-            print("Failed to fetch posts:", err)
-        }
-    }
 }

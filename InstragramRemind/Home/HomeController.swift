@@ -16,6 +16,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        navigationController?.setNavigationBarHidden(true, animated: true)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(handleUpdateFeed), name: SharePhotoController.updateFeedNotificationName, object: nil)
 
         collectionView?.backgroundColor = .white
@@ -28,7 +30,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         fetchPosts()
         
-        collectionView?.reloadData()
     }
     
     @objc func handleUpdateFeed() {
@@ -39,7 +40,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         print("Handling refresh")
         fetchPosts()
     }
-    
+
     var posts = [Post]()
     
     fileprivate func fetchPosts(){
@@ -62,9 +63,14 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                 //for each post's option
                 post.id = key
                 self.posts.append(post)
+                
+                //posts showing depend on time
+                self.posts.sort(by: { (p1, p2) -> Bool in
+                    return p1.creationDate.compare(p2.creationDate) == .orderedDescending
+                })
+                
+                self.collectionView?.reloadData()
             })
-            
-            self.collectionView?.reloadData()
             
         }) { (err) in
             print("Failed to fetch posts:", err)
